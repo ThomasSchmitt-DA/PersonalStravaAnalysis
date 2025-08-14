@@ -1,2 +1,50 @@
 # PersonalStravaAnalysis
-In this project, I conducted an in-depth analysis of my personal athletic data obtained from Strava to gain insights into my training habits and performance trends. Using Excel for initial data cleaning and preprocessing, I organized and structured the data to facilitate detailed analysis. I then utilized Power BI to create interactive dashboards that visualize key metrics such as training volume per year, activity frequency, performance improvements, and other relevant statistics.
+
+This project is a personal analysis of my Strava activity archives, using Excel and Power BI.
+
+The goal is to centralize, clean, analyze, and visualize my sports performance across different activities to track progress, understand habits, and identify areas for improvement.
+
+
+
+
+
+The project includes:
+
+Exported Strava data (.csv format)
+
+Data cleaning \& transformation using Power Query
+
+Interactive dashboard built with Power BI
+
+
+
+
+
+The dashboard is divided into several sections:
+
+1\. Global Activity Overview
+
+Activity hours per month
+
+Time distribution per sport (cycling, weight training, running, hiking, yoga, swimming)
+
+Total yearly hours and average monthly hours
+
+
+
+2\. Running
+
+Monthly distance and hours
+
+Distance per running shoe model
+
+Consistency tracking and training peaks
+
+
+
+3\. Cycling
+
+Monthly time and distance
+
+Estimated CO₂ saved thanks to bike commuting (in kg)
+
