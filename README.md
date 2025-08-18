@@ -32,7 +32,7 @@ Total yearly hours and average monthly hours
 
 
 
-2\. Running
+2\. Running Analytics
 
 Monthly distance and hours
 
@@ -42,9 +42,11 @@ Consistency tracking and training peaks
 
 
 
-3\. Cycling
+3\. Cycling comute Analytics
 
 Monthly time and distance
 
-Estimated CO₂ saved thanks to bike commuting (in kg)
+Distance travelled by year
+
+Estimated CO₂ saved thanks to bike commuting (in kgCO2)
 
