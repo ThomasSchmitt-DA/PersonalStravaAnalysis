@@ -1,0 +1,23 @@
+model Model
+	culture: fr-FR
+	defaultPowerBIDataSourceVersion: powerBI_V3
+	sourceQueryCulture: fr-FR
+	dataAccessOptions
+		legacyRedirects
+		returnErrorValuesAsNull
+
+annotation PBI_QueryOrder = ["activities","DayTable"]
+
+annotation __PBI_TimeIntelligenceEnabled = 1
+
+annotation PBIDesktopVersion = 2.146.1026.0 (25.08)+fb98ab832373de81dccd5c01cd96306a48477556
+
+annotation PBI_ProTooling = ["DevMode"]
+
+ref table DayTable
+ref table activities
+ref table DateTableTemplate_9e8efe16-479d-4091-bea2-b247d9db5485
+ref table LocalDateTable_eeb2d679-0684-4c13-8d65-c4590e40d5dc
+
+ref cultureInfo fr-FR
+

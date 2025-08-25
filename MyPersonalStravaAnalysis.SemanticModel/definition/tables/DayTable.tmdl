@@ -1,0 +1,31 @@
+table DayTable
+	lineageTag: a9d7e87e-1c8f-447f-8e76-dd20dd4dd1b0
+
+	column Day
+		dataType: int64
+		formatString: 0
+		lineageTag: 9037348c-fc4b-4413-ac2e-84bdb59eb492
+		summarizeBy: sum
+		sourceColumn: Day
+
+		annotation SummarizationSetBy = Automatic
+
+	column DayName
+		dataType: string
+		lineageTag: cba602e2-68b0-4441-a17e-002806f8e276
+		summarizeBy: none
+		sourceColumn: DayName
+
+		annotation SummarizationSetBy = Automatic
+
+	partition DayTable = m
+		mode: import
+		source =
+				let
+				    Source = Table.FromRows(Json.Document(Binary.Decompress(Binary.FromText("i45WMlTSUfLNz0tJrFSK1YlWMgJyQ0pTi2F8YyA/PDUlDyFiAlKRUVoEFzAFCrgVZcK4ZkBucGJJaRFMwBwkUAqxIRYA", BinaryEncoding.Base64), Compression.Deflate)), let _t = ((type nullable text) meta [Serialized.Text = true]) in type table [Day = _t, DayName = _t]),
+				    #"Type modifié" = Table.TransformColumnTypes(Source,{{"Day", Int64.Type}, {"DayName", type text}})
+				in
+				    #"Type modifié"
+
+	annotation PBI_ResultType = Table
+

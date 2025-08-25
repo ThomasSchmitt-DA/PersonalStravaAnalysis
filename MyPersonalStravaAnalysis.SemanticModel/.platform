@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "SemanticModel",
+    "displayName": "MyPersonalStravaAnalysis"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "539e86d5-2e02-4bf9-875a-a174da287429"
+  }
+}

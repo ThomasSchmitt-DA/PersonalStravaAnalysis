@@ -1,0 +1,155 @@
+table activities
+	lineageTag: 8d1386ed-6f1a-4f0f-a317-351e70bfa5f1
+
+	measure 'Moyenne de Somme de Elapsed_Time_Hour par Mois' =
+			
+			AVERAGEX(
+				KEEPFILTERS(VALUES('activities'[Activity_Date].[Mois])),
+				CALCULATE(SUM('activities'[Elapsed_Time_Hour]))
+			)
+		lineageTag: fd75afc3-066e-4e0d-9850-5d98d67332e0
+
+		extendedProperty MeasureTemplate =
+				{
+				  "version": 0,
+				  "daxTemplateName": "AveragePerCategory"
+				}
+
+		changedProperty = FormatString
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Moyenne de Somme de Distance par Mois' =
+			
+			AVERAGEX(
+				KEEPFILTERS(VALUES('activities'[Activity_Date].[Mois])),
+				CALCULATE(SUM('activities'[Distance]))
+			)
+		lineageTag: 0b1402ec-210c-4fa9-8f5b-187ecec78d5f
+
+		extendedProperty MeasureTemplate =
+				{
+				  "version": 0,
+				  "daxTemplateName": "AveragePerCategory"
+				}
+
+		changedProperty = FormatString
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Activity_ID
+		dataType: int64
+		formatString: 0
+		lineageTag: d450f324-9c89-4569-8ff6-036149cd1f8c
+		summarizeBy: count
+		sourceColumn: Activity_ID
+
+		annotation SummarizationSetBy = Automatic
+
+	column Activity_Date
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 6a9bea23-8135-488a-a1c1-60267c84a0f1
+		summarizeBy: none
+		sourceColumn: Activity_Date
+
+		variation Variation
+			isDefault
+			relationship: a54844a2-ba5b-4906-a167-421405c35896
+			defaultHierarchy: LocalDateTable_eeb2d679-0684-4c13-8d65-c4590e40d5dc.'Hiérarchie de dates'
+
+		annotation SummarizationSetBy = Automatic
+
+	column Activity_Type
+		dataType: string
+		lineageTag: 5b6da245-0eee-4c4f-91b4-039b7b4785f6
+		summarizeBy: none
+		sourceColumn: Activity_Type
+
+		annotation SummarizationSetBy = Automatic
+
+	column Elapsed_Time
+		dataType: int64
+		formatString: 0
+		lineageTag: 4bdaa435-4618-4eec-aebc-046a590be5e0
+		summarizeBy: sum
+		sourceColumn: Elapsed_Time
+
+		annotation SummarizationSetBy = Automatic
+
+	column Distance
+		dataType: double
+		lineageTag: ddf23561-2036-44fc-9a89-b472c4dd9b34
+		summarizeBy: sum
+		sourceColumn: Distance
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Carbon_Saved
+		dataType: double
+		lineageTag: 74606208-7d05-43da-8850-0869eb39eac3
+		summarizeBy: sum
+		sourceColumn: Carbon_Saved
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Elapsed_Time_Minute = activities[Elapsed_Time] / 60
+		lineageTag: 4f36bfb0-429d-4893-ab2d-40758d21b627
+		summarizeBy: sum
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Elapsed_Time_Hour = activities[Elapsed_Time] / 3600
+		lineageTag: ad4c9dc4-e96b-4d95-b33f-28544494ea77
+		summarizeBy: sum
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Activity Gear'
+		dataType: string
+		lineageTag: d95a2ea4-4638-4779-8600-ee527c16317c
+		summarizeBy: none
+		sourceColumn: Activity Gear
+
+		annotation SummarizationSetBy = Automatic
+
+	column Commute
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: 4c993d6e-da59-4349-8934-a945e8c7fb31
+		summarizeBy: none
+		sourceColumn: Commute
+
+		annotation SummarizationSetBy = Automatic
+
+	partition activities = m
+		mode: import
+		source =
+				let
+				    Source = Csv.Document(File.Contents("C:\Users\SESA758272\Documents\GitHub\PersonalStravaAnalysis\activities.csv"),[Delimiter=",", Columns=99, Encoding=65001, QuoteStyle=QuoteStyle.None]),
+				    #"En-têtes promus" = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),
+				    #"Type modifié" = Table.TransformColumnTypes(#"En-têtes promus",{{"Activity ID", Int64.Type}, {"Activity Date", type datetime}, {"Activity Name", type text}, {"Activity Type", type text}, {"Activity Description", type text}, {"Elapsed Time", Int64.Type}, {"Distance", type text}, {"Max Heart Rate", type text}, {"Relative Effort", Int64.Type}, {"Commute", type logical}, {"Activity Private Note", type text}, {"Activity Gear", type text}, {"Filename", type text}, {"Athlete Weight", type text}, {"Bike Weight", type text}, {"Elapsed Time_1", type text}, {"Moving Time", type text}, {"Distance_2", type text}, {"Max Speed", type text}, {"Average Speed", type text}, {"Elevation Gain", type text}, {"Elevation Loss", type text}, {"Elevation Low", type text}, {"Elevation High", type text}, {"Max Grade", type text}, {"Average Grade", type text}, {"Average Positive Grade", type text}, {"Average Negative Grade", type text}, {"Max Cadence", type text}, {"Average Cadence", type text}, {"Max Heart Rate_3", type text}, {"Average Heart Rate", type text}, {"Max Watts", type text}, {"Average Watts", type text}, {"Calories", type text}, {"Max Temperature", type text}, {"Average Temperature", type text}, {"Relative Effort_4", type text}, {"Total Work", type text}, {"Number of Runs", type text}, {"Uphill Time", type text}, {"Downhill Time", type text}, {"Other Time", type text}, {"Perceived Exertion", type text}, {"Type", type text}, {"Start Time", type text}, {"Weighted Average Power", type text}, {"Power Count", type text}, {"Prefer Perceived Exertion", type text}, {"Perceived Relative Effort", type text}, {"Commute_5", type text}, {"Total Weight Lifted", type text}, {"From Upload", type text}, {"Grade Adjusted Distance", type text}, {"Weather Observation Time", type text}, {"Weather Condition", type text}, {"Weather Temperature", type text}, {"Apparent Temperature", type text}, {"Dewpoint", type text}, {"Humidity", type text}, {"Weather Pressure", type text}, {"Wind Speed", type text}, {"Wind Gust", type text}, {"Wind Bearing", type text}, {"Precipitation Intensity", type text}, {"Sunrise Time", type text}, {"Sunset Time", type text}, {"Moon Phase", type text}, {"Bike", type text}, {"Gear", type text}, {"Precipitation Probability", type text}, {"Precipitation Type", type text}, {"Cloud Cover", type text}, {"Weather Visibility", type text}, {"UV Index", type text}, {"Weather Ozone", type text}, {"Jump Count", type text}, {"Total Grit", type text}, {"Average Flow", type text}, {"Flagged", type text}, {"Average Elapsed Speed", type text}, {"Dirt Distance", type text}, {"Newly Explored Distance", type text}, {"Newly Explored Dirt Distance", type text}, {"Activity Count", type text}, {"Total Steps", type text}, {"Carbon Saved", type text}, {"Pool Length", type text}, {"Training Load", type text}, {"Intensity", type text}, {"Average Grade Adjusted Pace", type text}, {"Timer Time", type text}, {"Total Cycles", type text}, {"Recovery", type text}, {"With Pet", type text}, {"Competition", type text}, {"Long Run", type text}, {"For a Cause", type text}, {"Media", type text}}),
+				    #"Valeur remplacée1" = Table.ReplaceValue(#"Type modifié",".",",",Replacer.ReplaceText,{"Distance"}),
+				    #"Colonnes supprimées" = Table.RemoveColumns(#"Valeur remplacée1",{"Pool Length", "Training Load", "Intensity", "Average Grade Adjusted Pace", "Timer Time", "Total Cycles", "Recovery", "With Pet", "Competition", "Long Run", "For a Cause", "Media", "Max Watts", "Average Watts", "Calories", "Max Temperature", "Average Temperature", "Relative Effort_4", "Total Work", "Number of Runs", "Uphill Time", "Downhill Time", "Other Time", "Perceived Exertion", "Type", "Start Time", "Weighted Average Power", "Power Count", "Prefer Perceived Exertion", "Perceived Relative Effort", "Commute_5", "Total Weight Lifted", "From Upload", "Grade Adjusted Distance", "Weather Observation Time", "Weather Condition", "Weather Temperature", "Apparent Temperature", "Dewpoint", "Humidity", "Weather Pressure", "Wind Speed", "Wind Gust", "Wind Bearing", "Precipitation Intensity", "Sunrise Time", "Sunset Time", "Moon Phase", "Bike", "Precipitation Probability", "Precipitation Type", "Cloud Cover", "Weather Visibility", "UV Index", "Weather Ozone", "Jump Count", "Total Grit", "Average Flow", "Flagged", "Average Elapsed Speed", "Dirt Distance", "Newly Explored Distance", "Newly Explored Dirt Distance", "Activity Count", "Total Steps", "Max Heart Rate", "Relative Effort", "Activity Private Note", "Gear", "Filename", "Athlete Weight", "Bike Weight", "Elapsed Time_1", "Moving Time", "Distance_2", "Max Speed", "Average Speed", "Elevation Gain", "Elevation Loss", "Elevation Low", "Elevation High", "Max Grade", "Average Grade", "Average Positive Grade", "Average Negative Grade", "Max Cadence", "Average Cadence", "Max Heart Rate_3", "Average Heart Rate", "Activity Description", "Activity Name"}),
+				    #"Valeur remplacée" = Table.ReplaceValue(#"Colonnes supprimées","Workout","Weight Training",Replacer.ReplaceText,{"Activity Type"}),
+				    #"Erreurs supprimées" = Table.RemoveRowsWithErrors(#"Valeur remplacée", {"Activity ID"}),
+				    #"Lignes filtrées" = Table.SelectRows(#"Erreurs supprimées", each [Elapsed Time] <> null and [Elapsed Time] <> ""),
+				    #"Colonnes renommées" = Table.RenameColumns(#"Lignes filtrées",{{"Activity Date", "Activity_Date"}, {"Activity ID", "Activity_ID"}, {"Activity Type", "Activity_Type"}, {"Elapsed Time", "Elapsed_Time"}, {"Carbon Saved", "Carbon_Saved"}}),
+				    #"Type modifié1" = Table.TransformColumnTypes(#"Colonnes renommées",{{"Distance", type number}}),
+				    #"Valeur remplacée2" = Table.ReplaceValue(#"Type modifié1",".",",",Replacer.ReplaceText,{"Carbon_Saved"}),
+				    #"Type modifié2" = Table.TransformColumnTypes(#"Valeur remplacée2",{{"Carbon_Saved", type number}})
+				in
+				    #"Type modifié2"
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+
