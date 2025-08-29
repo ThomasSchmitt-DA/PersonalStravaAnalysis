@@ -40,7 +40,7 @@
   ],
   "sections": [
     {
-      "config": "{}",
+      "config": "{\"objects\":{\"outspace\":[{\"properties\":{\"color\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":0,\"Percent\":-0.1}}}}}}}]}}",
       "displayName": "Running Analytics",
       "displayOption": 1,
       "filters": "[]",
@@ -48,15 +48,6 @@
       "name": "8fba2871d8f42dd9a880",
       "ordinal": 1,
       "visualContainers": [
-        {
-          "config": "{\"name\":\"2a5e077559506870edc1\",\"layouts\":[{\"id\":0,\"position\":{\"x\":0,\"y\":0,\"z\":0,\"width\":1280.2790307705206,\"height\":719.8135323216233,\"tabOrder\":3000}}],\"singleVisual\":{\"visualType\":\"shape\",\"drillFilterOtherVisuals\":true,\"objects\":{\"shape\":[{\"properties\":{\"tileShape\":{\"expr\":{\"Literal\":{\"Value\":\"'rectangle'\"}}}}}],\"rotation\":[{\"properties\":{\"shapeAngle\":{\"expr\":{\"Literal\":{\"Value\":\"0L\"}}}}}],\"fill\":[{\"properties\":{\"fillColor\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":0,\"Percent\":-0.1}}}}}},\"selector\":{\"id\":\"default\"}}],\"glow\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}],\"shadow\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}],\"outline\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}]},\"vcObjects\":{\"general\":[{\"properties\":{\"keepLayerOrder\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}],\"background\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}]}},\"howCreated\":\"InsertVisualButton\"}",
-          "filters": "[]",
-          "height": 719.81,
-          "width": 1280.28,
-          "x": 0.00,
-          "y": 0.00,
-          "z": 0.00
-        },
         {
           "config": "{\"name\":\"3385d7a5987c3210be9d\",\"layouts\":[{\"id\":0,\"position\":{\"x\":609.9183365473295,\"y\":13.736899471786703,\"z\":2000,\"width\":373.6436656325983,\"height\":60.442357675861494,\"tabOrder\":1000}}],\"singleVisual\":{\"visualType\":\"slicer\",\"projections\":{\"Values\":[{\"queryRef\":\"activities.Activity_Date.Variation.Hiérarchie de dates.Année\",\"active\":true}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"a\",\"Entity\":\"activities\",\"Type\":0}],\"Select\":[{\"HierarchyLevel\":{\"Expression\":{\"Hierarchy\":{\"Expression\":{\"PropertyVariationSource\":{\"Expression\":{\"SourceRef\":{\"Source\":\"a\"}},\"Name\":\"Variation\",\"Property\":\"Activity_Date\"}},\"Hierarchy\":\"Hiérarchie de dates\"}},\"Level\":\"Année\"},\"Name\":\"activities.Activity_Date.Variation.Hiérarchie de dates.Année\",\"NativeReferenceName\":\"Activity_Date Année\"}],\"OrderBy\":[{\"Direction\":1,\"Expression\":{\"HierarchyLevel\":{\"Expression\":{\"Hierarchy\":{\"Expression\":{\"PropertyVariationSource\":{\"Expression\":{\"SourceRef\":{\"Source\":\"a\"}},\"Name\":\"Variation\",\"Property\":\"Activity_Date\"}},\"Hierarchy\":\"Hiérarchie de dates\"}},\"Level\":\"Année\"}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true,\"objects\":{\"data\":[{\"properties\":{\"mode\":{\"expr\":{\"Literal\":{\"Value\":\"'Basic'\"}}}}}],\"general\":[{\"properties\":{\"orientation\":{\"expr\":{\"Literal\":{\"Value\":\"1D\"}}},\"filter\":{\"filter\":{\"Version\":2,\"From\":[{\"Name\":\"l\",\"Entity\":\"LocalDateTable_eeb2d679-0684-4c13-8d65-c4590e40d5dc\",\"Type\":0}],\"Where\":[{\"Condition\":{\"In\":{\"Expressions\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"l\"}},\"Property\":\"Année\"}}],\"Values\":[[{\"Literal\":{\"Value\":\"2025L\"}}]]}}}]}},\"outlineColor\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":0,\"Percent\":-0.1}}}}}}}],\"header\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}],\"items\":[{\"properties\":{\"padding\":{\"expr\":{\"Literal\":{\"Value\":\"4D\"}}},\"textSize\":{\"expr\":{\"Literal\":{\"Value\":\"20D\"}}}}}]},\"vcObjects\":{\"border\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}],\"visualHeader\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}],\"background\":[{\"properties\":{\"color\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":0,\"Percent\":-0.1}}}}}}}]},\"cachedFilterDisplayItems\":[{\"id\":{\"scopeId\":{\"Comparison\":{\"ComparisonKind\":0,\"Left\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"LocalDateTable_eeb2d679-0684-4c13-8d65-c4590e40d5dc\"}},\"Property\":\"Année\"}},\"Right\":{\"Literal\":{\"Value\":\"2025L\"}}}}},\"displayName\":\"2025\"}]}}",
           "filters": "[]",
@@ -124,7 +115,7 @@
       "width": 1280.00
     },
     {
-      "config": "{}",
+      "config": "{\"objects\":{\"outspace\":[{\"properties\":{\"color\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":0,\"Percent\":-0.1}}}}}}}]}}",
       "displayName": "Bike Comute Analytics",
       "displayOption": 1,
       "filters": "[]",
@@ -178,15 +169,6 @@
           "z": 2000.00
         },
         {
-          "config": "{\"name\":\"c4c0a7453b6cdd378ec0\",\"layouts\":[{\"id\":0,\"position\":{\"x\":0,\"y\":0,\"z\":0,\"width\":1280,\"height\":720.2446483180428,\"tabOrder\":5000}}],\"singleVisual\":{\"visualType\":\"shape\",\"drillFilterOtherVisuals\":true,\"objects\":{\"shape\":[{\"properties\":{\"tileShape\":{\"expr\":{\"Literal\":{\"Value\":\"'rectangle'\"}}}}}],\"rotation\":[{\"properties\":{\"shapeAngle\":{\"expr\":{\"Literal\":{\"Value\":\"0L\"}}}}}],\"fill\":[{\"properties\":{\"fillColor\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":0,\"Percent\":-0.1}}}}}},\"selector\":{\"id\":\"default\"}}],\"glow\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}],\"shadow\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}],\"outline\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}]},\"vcObjects\":{\"general\":[{\"properties\":{\"keepLayerOrder\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}],\"background\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}]}},\"howCreated\":\"InsertVisualButton\"}",
-          "filters": "[]",
-          "height": 720.24,
-          "width": 1280.00,
-          "x": 0.00,
-          "y": 0.00,
-          "z": 0.00
-        },
-        {
           "config": "{\"name\":\"cf26935a013657aed834\",\"layouts\":[{\"id\":0,\"position\":{\"x\":27.20403022670025,\"y\":5.44080604534005,\"z\":5000,\"width\":66.19647355163727,\"height\":70.73047858942066,\"tabOrder\":4000}}],\"singleVisual\":{\"visualType\":\"image\",\"drillFilterOtherVisuals\":true,\"objects\":{\"general\":[{\"properties\":{\"imageUrl\":{\"expr\":{\"ResourcePackageItem\":{\"PackageName\":\"RegisteredResources\",\"PackageType\":1,\"ItemName\":\"30911322863081715155376.png\"}}}}}]},\"vcObjects\":{\"visualLink\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"type\":{\"expr\":{\"Literal\":{\"Value\":\"'PageNavigation'\"}}},\"navigationSection\":{\"expr\":{\"Literal\":{\"Value\":\"'d65762268710ba15a29b'\"}}}}}]}},\"howCreated\":\"InsertVisualButton\"}",
           "filters": "[]",
           "height": 70.73,
@@ -199,7 +181,7 @@
       "width": 1280.00
     },
     {
-      "config": "{\"relationships\":[{\"source\":\"e6027700109723a27663\",\"target\":\"210a0141ae0e2dcaa2f1\",\"type\":3},{\"source\":\"e6027700109723a27663\",\"target\":\"6c01e998e6379f29e514\",\"type\":3},{\"source\":\"210a0141ae0e2dcaa2f1\",\"target\":\"6c01e998e6379f29e514\",\"type\":3},{\"source\":\"210a0141ae0e2dcaa2f1\",\"target\":\"c60a95cc5fd0fa8d5c64\",\"type\":3},{\"source\":\"9d1de8c732abc69d9227\",\"target\":\"6c01e998e6379f29e514\",\"type\":3},{\"source\":\"9d1de8c732abc69d9227\",\"target\":\"c60a95cc5fd0fa8d5c64\",\"type\":3},{\"source\":\"9d1de8c732abc69d9227\",\"target\":\"210a0141ae0e2dcaa2f1\",\"type\":2},{\"source\":\"e6027700109723a27663\",\"target\":\"c60a95cc5fd0fa8d5c64\",\"type\":3}]}",
+      "config": "{\"relationships\":[{\"source\":\"e6027700109723a27663\",\"target\":\"210a0141ae0e2dcaa2f1\",\"type\":3},{\"source\":\"e6027700109723a27663\",\"target\":\"6c01e998e6379f29e514\",\"type\":3},{\"source\":\"210a0141ae0e2dcaa2f1\",\"target\":\"6c01e998e6379f29e514\",\"type\":3},{\"source\":\"210a0141ae0e2dcaa2f1\",\"target\":\"c60a95cc5fd0fa8d5c64\",\"type\":3},{\"source\":\"9d1de8c732abc69d9227\",\"target\":\"6c01e998e6379f29e514\",\"type\":3},{\"source\":\"9d1de8c732abc69d9227\",\"target\":\"c60a95cc5fd0fa8d5c64\",\"type\":3},{\"source\":\"9d1de8c732abc69d9227\",\"target\":\"210a0141ae0e2dcaa2f1\",\"type\":2},{\"source\":\"e6027700109723a27663\",\"target\":\"c60a95cc5fd0fa8d5c64\",\"type\":3}],\"objects\":{\"background\":[{\"properties\":{\"color\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":0,\"Percent\":0}}}}}}}],\"outspace\":[{\"properties\":{\"color\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":0,\"Percent\":-0.1}}}}}}}]}}",
       "displayName": "Sports Activitiy",
       "displayOption": 1,
       "filters": "[]",
@@ -268,15 +250,6 @@
           "x": 27.20,
           "y": 5.44,
           "z": 8000.00
-        },
-        {
-          "config": "{\"name\":\"b6d087ee0e092c61074a\",\"layouts\":[{\"id\":0,\"position\":{\"x\":0,\"y\":0,\"z\":0,\"width\":1280,\"height\":720.2446483180428,\"tabOrder\":7000}}],\"singleVisual\":{\"visualType\":\"shape\",\"drillFilterOtherVisuals\":true,\"objects\":{\"shape\":[{\"properties\":{\"tileShape\":{\"expr\":{\"Literal\":{\"Value\":\"'rectangle'\"}}}}}],\"rotation\":[{\"properties\":{\"shapeAngle\":{\"expr\":{\"Literal\":{\"Value\":\"0L\"}}}}}],\"fill\":[{\"properties\":{\"fillColor\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":0,\"Percent\":-0.1}}}}}},\"selector\":{\"id\":\"default\"}}],\"glow\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}],\"shadow\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}],\"outline\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}]},\"vcObjects\":{\"general\":[{\"properties\":{\"keepLayerOrder\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}],\"background\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}]}},\"howCreated\":\"InsertVisualButton\"}",
-          "filters": "[]",
-          "height": 720.24,
-          "width": 1280.00,
-          "x": 0.00,
-          "y": 0.00,
-          "z": 0.00
         },
         {
           "config": "{\"name\":\"c60a95cc5fd0fa8d5c64\",\"layouts\":[{\"id\":0,\"position\":{\"x\":1046.1162079510702,\"y\":538.2262996941896,\"z\":5000,\"width\":210.39755351681956,\"height\":162.44648318042812,\"tabOrder\":5000}}],\"singleVisual\":{\"visualType\":\"card\",\"projections\":{\"Values\":[{\"queryRef\":\"activities.Moyenne de Somme de Elapsed_Time_Hour par Mois\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"a\",\"Entity\":\"activities\",\"Type\":0}],\"Select\":[{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"a\"}},\"Property\":\"Moyenne de Somme de Elapsed_Time_Hour par Mois\"},\"Name\":\"activities.Moyenne de Somme de Elapsed_Time_Hour par Mois\",\"NativeReferenceName\":\"Moyenne de Somme de Elapsed_Time_Hour par Mois\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"a\"}},\"Property\":\"Moyenne de Somme de Elapsed_Time_Hour par Mois\"}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true,\"objects\":{\"labels\":[{\"properties\":{\"preserveWhitespace\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"labelDisplayUnits\":{\"expr\":{\"Literal\":{\"Value\":\"1D\"}}},\"labelPrecision\":{\"expr\":{\"Literal\":{\"Value\":\"0L\"}}},\"fontFamily\":{\"expr\":{\"Literal\":{\"Value\":\"'''Segoe UI'', wf_segoe-ui_normal, helvetica, arial, sans-serif'\"}}},\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"52D\"}}},\"bold\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}],\"categoryLabels\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}]},\"vcObjects\":{\"title\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'Average monthly activity hours'\"}}},\"background\":{\"solid\":{\"color\":{\"expr\":{\"Literal\":{\"Value\":\"null\"}}}}},\"fontColor\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":1,\"Percent\":0}}}}},\"alignment\":{\"expr\":{\"Literal\":{\"Value\":\"'left'\"}}},\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"16D\"}}},\"fontFamily\":{\"expr\":{\"Literal\":{\"Value\":\"'''Segoe UI'', wf_segoe-ui_normal, helvetica, arial, sans-serif'\"}}}}}],\"border\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"radius\":{\"expr\":{\"Literal\":{\"Value\":\"15D\"}}},\"color\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":0,\"Percent\":-0.1}}}}}}}],\"visualHeader\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}],\"background\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}]}}}",
